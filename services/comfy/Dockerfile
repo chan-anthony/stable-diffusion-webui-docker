@@ -9,8 +9,9 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   git clone https://github.com/comfyanonymous/ComfyUI.git ${ROOT} && \
   cd ${ROOT} && \
   git checkout master && \
-  git reset --hard 276f8fce9f5a80b500947fb5745a4dde9e84622d && \
-  pip install -r requirements.txt
+  # git reset --hard e18f53cca9062cc6b165e16712772437b80333f2 && \
+  pip install -r requirements.txt && \
+  pip install -U torch torchsde torchvision torchaudio
 
 WORKDIR ${ROOT}
 COPY . /docker/

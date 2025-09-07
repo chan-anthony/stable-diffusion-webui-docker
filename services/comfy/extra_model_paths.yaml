@@ -5,6 +5,8 @@ a111:
   configs: models/Stable-diffusion
   vae: models/VAE
   loras: models/Lora
+  diffusion_models: models/diffusion_models
+  text_encoders: models/text_encoders
   upscale_models: |
     models/RealESRGAN
     models/ESRGAN
